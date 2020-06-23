@@ -19,7 +19,13 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <MASM Include="grupo_08_proyecto_1.asm" />
+    <MASM Include="main.asm" />
+    <MASM Include="RequestIntegers.asm" />
+    <MASM Include="Show_mult.asm" />
+    <MASM Include="uint8_mult.asm" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Mult.inc" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
