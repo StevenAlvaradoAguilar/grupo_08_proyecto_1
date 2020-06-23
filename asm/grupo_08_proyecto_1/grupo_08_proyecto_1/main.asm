@@ -18,7 +18,7 @@ include Mult.inc
 EXTERN RequestIntegers@0:PROC
 EXTERN uint8_mult@0:PROC, Show_mult@0:PROC
 
-; Redefines the external symbols for convinience 
+; Redefine los símbolos externos por conveniencia
 uint8_mult EQU uint8_mult@0
 RequestIntegers EQU RequestIntegers@0
 Show_mult EQU Show_mult@0
@@ -35,24 +35,24 @@ theMult WORD ?
 .code
 main PROC
 call Clrscr
-; AskIntegers( addr indicador1, addr arreglo, Cuenta )
+; PedirEnteros( addr indicador1, addr arreglo, Cuenta )
 	push Integers
 	push OFFSET arreglo
 	push OFFSET indicador1
 	call RequestIntegers
 
-; AskIntegers( addr indicador1, addr arreglo, Cuenta )
+; PedirEnteros( addr indicador1, addr arreglo, Cuenta )
 	push Integers
 	push OFFSET arreglo
 	push OFFSET indicador2
 	call RequestIntegers
 
-; Sum = SumaArreglo( addr arreglo, Cuenta )
+; sum = SumaArreglo( addr arreglo, Cuenta )
 	push Integers
 	push OFFSET arreglo
 	call uint8_mult
 	mov theMult, eax
-; Showsum( addr indicador2, suma )
+; MostrarSuma( addr indicador2, suma )
 	push theMult 
 	push OFFSET indicador3
 	call Show_mult

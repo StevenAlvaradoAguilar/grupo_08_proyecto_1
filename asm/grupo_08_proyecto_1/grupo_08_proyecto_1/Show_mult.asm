@@ -20,25 +20,25 @@ include Mult.inc
 .code
 ;-----------------------------------------------------
 Show_mult PROC
-; Shows the sum in the consul.
-; Resives:
-; ptrIndicador ; Movemento of the indicator chain.
-; The sum ; The sum of the  array (WORD)
-; Returns: Nothing 
+; Muestra la suma en la consola.
+; Recibe:
+; ptrIndicador ; desplazamiento de la cadena indicadora
+; laSuma ; la suma del arreglo (WORD)
+; Devuelve: nada
 ;-----------------------------------------------------
 theMult:WORD
 ptrIndicator:PTR BYTE
 	push eax
 	push edx
-	mov edx, ptrIndicator ; Pointer to the Indicator
+	mov edx, ptrIndicator ; apuntador al indicador
 	call WriteString
 	mov ax, theMult
-	call WriteInt ; Show EAX
+	call WriteInt ; muestra EAX
 	call Crlf
 	pop edx
 	pop eax
 	leave
-	ret  ; Refreshes the stack
+	ret  ; restaura la pila
 Show_mult ENDP
 END
 

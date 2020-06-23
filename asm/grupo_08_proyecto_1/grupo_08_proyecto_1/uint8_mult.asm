@@ -34,9 +34,9 @@ Index1 BYTE 0
 ;-----------------------------------------------------
 uint8_mult PROC
 
-	mov eax, Index1 ; Indicates the sum of zero
+	mov eax, Index1 ; establece la suma a cero
 	mov ecx, Multiplier
-	cmp ecx, 0 ; ¿The size of the array is <= 0?
+	cmp ecx, 0 ; ¿el tamaño del arreglo <= 0?
 	jle L2
 
 L1:
@@ -50,7 +50,7 @@ L1:
 
 L2:
 	CMP Bit, 1
-	MOV bl, Multiplying 
+	MOV bl, Multiplicand
 	SHL bx, al
 	MOV word PTR Result, bx	
 	LEAVE
@@ -59,5 +59,5 @@ INVOKE ExitProcess, 0
 
 uint8_mult ENDP
 
-; (Insert addicional procideurs here.)
+; (insertar procesos adicionales aqui)
 END

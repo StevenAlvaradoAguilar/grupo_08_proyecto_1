@@ -6,7 +6,7 @@ includelib c:\Irvine\user32.lib
 ;seccion 8.6.3 Irvine
 
 RequestInteger PROTO,
-	ptrIndicator:PTR BYTE	; Direccion of the Indicator
+	ptrIndicator:PTR BYTE	; dirección del indicador
 	Multiplier:BYTE 
 	Index1:BYTE 
 	
@@ -19,5 +19,5 @@ uint8_mult PROTO,
 
 
 Show_mult PROTO,
-	ptrIndicador:PTR BYTE, ; Indicator of the mesage chain
-	theMult:WORD ; Sum of the array
+	ptrIndicador:PTR BYTE, ; cadena de mensaje indicador
+	theMult:WORD ; suma del arreglo

@@ -23,31 +23,31 @@ Index1 BYTE 0
 .code
 ;----------------------------------------------------
 RequestIntegers PROC
-; Askes the user for two whole numbers. 
-; With the input from the user.
-; Resives:
-; ptrIndicator:PTR BYTE ; Numbers from the user
+; Pide al usuario dos números enteros 
+; con la entrada del usuario.
+; Recibe:
+; ptrIndicator:PTR BYTE ; números del usuario
 
 ptrIndicator EQU [EBP+2]
 
-	pushad ; Saves all the registers
+	pushad ; guarda todos los registros
 
 	mov cl, Multiplier
-	cmp cl, 0 ; ¿Size of the array is  <= 0?
+	cmp cl, 0 ; ¿tamaño del arreglo <= 0?
 	jle L2 ; sí: termina
-	mov dl, ptrIndicator ; Direccion of the Indicator
+	mov dl, ptrIndicator ; dirección del indicador
 	mov si, Multiplier
 
-L1: call WriteString ; Shows the chain
-	call ReadInt ; Reads whole number and places it in EAX
-	call Crlf ; Advances to the next exit line
-	mov [si], al ; Saves it to the array
-	add si, 2 ; Next whole number 
+L1: call WriteString ; muestra la cadena
+	call ReadInt ; lee entero y lo coloca en EAX
+	call Crlf ; avanza a la siguiente línea de salida
+	mov [si], al ; lo almacena en el arreglo
+	add si, 2 ; siguiente entero
 	loop L1
 
-L2: popad ;Refreshes all the registers
+L2: popad ; restaura todos los registros
 	leave
-	ret  ; Refreshes the stack
+	ret  ; restaura la pila
 
 RequestIntegers ENDP
 END
