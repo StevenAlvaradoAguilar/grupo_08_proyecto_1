@@ -21,15 +21,14 @@
   <ItemGroup>
     <MASM Include="main.asm" />
     <MASM Include="RequestIntegers.asm" />
-    <MASM Include="Show_mult.asm" />
     <MASM Include="uint8_mult.asm" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Mult.inc" />
+    <None Include="Mult.inc" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{b370ebba-7e97-404d-8e5e-263490d28e9b}</ProjectGuid>
+    <ProjectGuid>{ad70705e-a9bd-44fd-83f1-abab200c8025}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>grupo_08_proyecto_1</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
@@ -104,7 +103,12 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Irvine;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>user32.lib;irvine32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <MASM>
+      <IncludePaths>C:\Irvine;%(IncludePaths)</IncludePaths>
+    </MASM>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>

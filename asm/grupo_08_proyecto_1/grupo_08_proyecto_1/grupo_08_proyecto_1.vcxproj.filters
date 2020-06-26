@@ -15,20 +15,19 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <MASM Include="uint8_mult.asm">
-      <Filter>Archivos de origen</Filter>
-    </MASM>
     <MASM Include="main.asm">
-      <Filter>Archivos de origen</Filter>
-    </MASM>
-    <MASM Include="Show_mult.asm">
       <Filter>Archivos de origen</Filter>
     </MASM>
     <MASM Include="RequestIntegers.asm">
       <Filter>Archivos de origen</Filter>
     </MASM>
+    <MASM Include="uint8_mult.asm">
+      <Filter>Archivos de origen</Filter>
+    </MASM>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Mult.inc" />
+    <None Include="Mult.inc">
+      <Filter>Archivos de origen</Filter>
+    </None>
   </ItemGroup>
 </Project>
